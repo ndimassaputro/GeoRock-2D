@@ -77,32 +77,34 @@ Engineering site-characterization discussion
 
 The linearized travel-time relationship is written as:
 
-\[
-\mathbf{d}=\mathbf{G}\mathbf{m}+\boldsymbol{\varepsilon}
-\]
+$$
+\mathbf{d} = \mathbf{G}\mathbf{m} + \boldsymbol{\varepsilon}
+$$
 
 where:
 
-- \(\mathbf{d}\) is the travel-time vector;
-- \(\mathbf{G}\) is the path-length sensitivity matrix;
-- \(\mathbf{m}\) is the cell-slowness vector;
-- \(\boldsymbol{\varepsilon}\) represents observational error.
+- $\mathbf{d}$ is the travel-time vector;
+- $\mathbf{G}$ is the path-length sensitivity matrix;
+- $\mathbf{m}$ is the cell-slowness vector;
+- $\boldsymbol{\varepsilon}$ represents observational error.
 
 The inverse problem is solved through bounded regularized least squares:
 
-\[
-\min_{\mathbf{m}}
+$$
+\underset{\mathbf{m}}{\operatorname{minimize}}
+\quad
 \left\|
-\mathbf{G}\mathbf{m}-\mathbf{d}
+\mathbf{G}\mathbf{m} - \mathbf{d}
 \right\|_2^2
 +
 \lambda^2
 \left\|
 \mathbf{L}\mathbf{m}
 \right\|_2^2
-\]
+$$
 
-where \(\mathbf{L}\) is a first-order spatial smoothness operator and \(\lambda\) controls the trade-off between data fit and model smoothness.
+where $\mathbf{L}$ is a first-order spatial smoothness operator and
+$\lambda$ controls the trade-off between data fit and model smoothness.
 
 ---
 
@@ -149,11 +151,12 @@ A conceptual V-shaped ray geometry is used to create a transparent baseline for 
 
 The travel time for one ray is evaluated from:
 
-\[
-t=\sum_i \frac{\Delta s_i}{v_i}
-\]
+$$
+t = \sum_i \frac{\Delta s_i}{v_i}
+$$
 
-where \(\Delta s_i\) is the segment length inside a model cell and \(v_i\) is the corresponding P-wave velocity.
+where $\Delta s_i$ is the segment length inside a model cell and
+$v_i$ is the corresponding P-wave velocity.
 
 ### Important physical limitation
 
