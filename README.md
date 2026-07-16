@@ -12,6 +12,15 @@ The project implements a transparent Python workflow covering synthetic geologic
 
 > **Scope statement:** All geological models and observations in this repository are synthetic. The project is a methodological demonstration, does not propose a new inversion algorithm, and has not been validated using field data.
 
+## Project Highlights
+
+- Built a 196 × 2,700 path-length sensitivity matrix.
+- Evaluated seven regularization strengths.
+- Reduced local rockhead RMSE from 9.186 m to 0.762 m using coverage-aware interpretation.
+- Integrated three sparse synthetic boreholes into a full-profile rockhead model.
+- Quantified uncertainty using 50 repeated noise realizations.
+- Added nine unit tests for model, forward-response, and sensitivity calculations.
+
 ---
 
 ## Research Question
