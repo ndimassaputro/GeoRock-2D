@@ -1,0 +1,4 @@
+scenario,spatial_coverage_percent,mae_m,rmse_m,maximum_absolute_error_m
+Geophysics-only valid region,35.0,0.7191156516601216,0.7619993872084218,1.0789967723695515
+Full-profile baseline interpolation,100.0,0.976358909577984,1.3987422817227668,3.695173491262988
+Borehole-constrained full profile,100.0,0.908766332571862,1.434774079300222,3.9075006620132804
