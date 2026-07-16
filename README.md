@@ -1,4 +1,8 @@
 # GeoRock-2D
+![Python](https://img.shields.io/badge/Python-3.12-blue)
+![Tests](https://img.shields.io/badge/tests-9%20passed-brightgreen)
+![License](https://img.shields.io/badge/License-MIT-green)
+![Data](https://img.shields.io/badge/data-synthetic-orange)
 
 ## Uncertainty-Aware Seismic Rockhead Characterization Using Synthetic Travel-Time Data and Sparse Boreholes
 
@@ -580,6 +584,37 @@ pytest
 Only Matplotlib is used for visualization.
 
 ---
+## Testing
+
+The repository includes nine unit tests covering the synthetic geological
+model, conceptual forward modelling, and path-length sensitivity matrix.
+
+Run the complete test suite from the repository root:
+
+```powershell
+pytest -v
+```
+
+The tests verify:
+
+- expected model dimensions;
+- finite and positive P-wave velocities;
+- rockhead geometry within the model domain;
+- correct conceptual ray endpoints;
+- positive travel-time calculations;
+- increasing path length with source–receiver offset;
+- sensitivity-matrix dimensions of 196 × 2,700;
+- finite and non-negative path-length values;
+- consistency of the linear forward response.
+
+Current local test result:
+
+```text
+9 passed
+```
+
+---
+
 
 ## Assumptions
 
@@ -688,20 +723,19 @@ The scientific background of the project includes literature on:
 - integration of borehole and geophysical information;
 - uncertainty in engineering geological models.
 
-A structured literature matrix is provided in:
+A structured literature matrix is available in:
 
-```text
-references/literature_matrix.md
-```
+[`references/literature_matrix.md`](references/literature_matrix.md)
 
-Selected methodological references include:
+### Selected Reference Groups
 
-- Menke, W. *Geophysical Data Analysis: Discrete Inverse Theory*.
-- Tarantola, A. *Inverse Problem Theory and Methods for Model Parameter Estimation*.
-- Zelt, C. A. Controlled-source travel-time tomography.
-- Zelt, C. A., and Barton, P. J. Seismic refraction tomography.
-- Wu, S., and co-authors. Geological modelling and geophysical characterization in Singapore.
-- Yang, H.-Q., and co-authors. Bayesian evidential learning of soil–rock interfaces using boreholes.
+The literature matrix includes references concerning:
+
+- geological modelling for underground construction in Singapore;
+- uncertainty-aware soil–rock interface identification using boreholes;
+- comparison of borehole-derived geological profiles and geophysical testing;
+- seismic travel-time tomography and spatial resolution;
+- discrete inverse theory and regularized parameter estimation.
 
 ---
 
