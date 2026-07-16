@@ -91,8 +91,7 @@ where:
 The inverse problem is solved through bounded regularized least squares:
 
 $$
-\underset{\mathbf{m}}{\operatorname{minimize}}
-\quad
+\min_{\mathbf{m}}
 \left\|
 \mathbf{G}\mathbf{m} - \mathbf{d}
 \right\|_2^2
